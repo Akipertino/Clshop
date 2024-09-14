@@ -1,0 +1,160 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* CONTENEUR PRINCIPAL */
+.container {
+    background:linear-gradient(to top, rgb(19, 173, 122) 20%, rgb(80, 83, 219));
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LE FORMULAIRE */
+form {
+    background-color: #FFF;
+    width: 380px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+/* LES SPAN */
+span {
+    display: block;
+}
+
+
+/* ENTETE DU FORMULAIRE */
+#entete {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: blue;
+    font-weight: bold;
+}
+/* LOGO DU SITE */
+.logoSite {
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-weight: bolder;
+}
+/* BARRES DU LOGO */
+.logoSite .bar {
+    width:5px;
+    flex-shrink: 0;
+    background-color: blue;
+    border-radius: 5px;
+    height: 25px;
+}
+/* BARRES MOYENNES DU LOGO */
+.logoSite #baro1 {
+    height: 16px;
+}
+/* FIN ENTETE DU FORMULAIRE */
+
+/* PRENOM ET NOM */
+#identifiant {
+    box-sizing: border-box;
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    color: rgba(32, 32, 34, 0.726);
+    gap: 15px;
+}
+
+#div_nom, #div_prenom {
+    display: inline-block;
+    align-self: flex-start;
+    width: 50%;
+    align-self:flex-end;
+}
+
+/* DATE DE NAISSANCE */
+#naissance input {
+    width:  62px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+#naissance img {
+    width: 30px;
+    position: relative;
+    top: 10px;
+}
+
+/* ENSEMBLE DES BLOCKS SOUS-CONTENEURS */
+.groupe {
+    align-self: flex-start;
+    width: 100%;
+}
+/* ENSEMBLE DES INPUTS ET DU SELEC */
+.groupe input, select {
+    width: 100%;
+    margin: 5px 0;
+    background-color: rgba(178, 176, 196, 0.726);
+    outline: none;
+    border: none;
+    height: 28px;
+    font-size: 16px;
+    padding: 0 5px ;
+    box-sizing: border-box;
+}
+
+/* CONTENEUR DU BOUTON */
+#btn button {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(9, 9, 126);
+    cursor: pointer;
+}
+
+
+
+/* LOGO DU CLUB DES JEUNES FILLES DE GUINEE POUVANT REMPLACER LE LOGO ACTUE  */
+/* #logo {
+    display: inline;
+    position: absolute;
+    top: 33%;
+    right: 3%;
+    color: blue;
+    letter-spacing: 2px;
+    font-weight: bold;
+} */
+/* img {
+    width: 50px;
+    border-radius: 5px;
+} */
+
+/* NULL #logo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+} */

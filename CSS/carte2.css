@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    fborder: 1px dotted red;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: rgb(23, 3, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.carte {
+    width: 800px;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(240, 57, 57) 10%, rgb(233, 92, 221) 35%, rgb(34, 147, 252));
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgb(13, 245, 233);
+
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 10px;
+    opacity: 0;
+    animation: reveal 3s;
+    opacity: 1;
+
+    
+}
+
+.profil, .detail {
+    padding: 10px;
+    border-radius: 10px;
+}
+.profil {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background: linear-gradient(to right, rgb(73, 72, 72), rgb(0, 0, 0) );
+}
+.profil #photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profil img {
+    width: 80%;
+    min-width: 100px;
+    max-width: 250px;
+}
+.profil #description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.profil div {
+    width: 100%;
+    font-size: 22px;
+}
+.profil button {
+    font-size: 0.7em;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(6, 167, 167);
+    opacity: .8;
+}
+.profil button:hover {
+    background-color: rgb(52, 243, 243);
+}
+/* DETAILS DES INFORMATIONS */
+.detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+    background: linear-gradient(to right, rgb(0, 0, 0) , rgb(73, 72, 72));
+}
+.detail #titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.detail #infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+.detail #infos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px 20px;
+}
+.detail #infos #labels span {
+    padding-left: 60px;
+}
+
+/* ECRITURE EN COULEUR */
+.profil p, .detail h2 {
+    background: linear-gradient(to right, rgb(252, 17, 213), rgb(206, 187, 81));
+        font-weight: bold;
+        -webkit-background-clip: text;
+        color: transparent;
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media screen and (max-width: 600px) {
+    .carte {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .profil {
+        width: 100% ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .profil div p, .detail h2 {
+        background: linear-gradient(to right, rgb(252, 17, 213), rgb(206, 187, 81));
+        font-weight: bold;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .detail {
+        width: 100%;
+    }
+
+
+}

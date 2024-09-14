@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <div class="main-container">
+
+        <!-- BLUE -->
+        <div class="container1">
+            <!-- Nom de mon Entreprise -->
+            <div class="nom-entreprise">
+                <h2>CodePLus Guinée</h2>
+            </div>
+
+            <!-- A propos de moi -->
+            <div  class="propos">
+                <div class="texte">
+                    <h1 class="fonction">Développeur <br> Frontend<span style="color:white">.</span></h1>
+                    <p> Je suis passionné du développement web et j'ai 4 années 
+                        d'expériences dans ce domaine et je souhaite approfondir 
+                        mes connaissance avec plus de pratique.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="exp1">
+                    <p>J'ai commencé par des logiciels de gestion d'entreprise. <br> 
+                        Je souhaite continuer dans le monde de l'intelligence artificielle.
+                    </p>
+                </div>
+                <div class="exp1">
+                    <p>A travers un long parcours, j'ai acquis des <br> expériences ultime et réussi à développer <br>  plusieurs applications pour des entreprises.</p>
+                </div>
+            </div>
+        </div>
+        <!-- FIN BLUE -->
+        
+        <!-- VERT -->
+        <div class="container2">
+            
+        </div>
+        <!-- FIN VERT -->
+
+        <!-- PHOTO -->
+        <div class="profil">
+            <img src="images/image (5).png"  alt="">
+        </div>
+        <!-- FIN PHOTO -->
+
+        <!-- Mon block label -->
+        <div class="horiz">
+            <input type="checkbox" id="check">
+            <label for="check" class="lines">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+            </label>
+                    <!-- MA SIBEBAR -->
+            <div class="sidebar">
+                <div class="logo">
+                    <div class="p">CodePLus</div> <div class="p2">Guinée</div>
+                </div>
+                <div class="liens">
+                    <div class="groupe1">
+                        <a href="https://work.com">Mon Travail</a>
+                        <a href="https://shelf.fr">Mon Bouclier</a>
+                        <a href="https://parcours.com">Mon parcours</a>
+                    </div>
+                    <div class="groupe2">
+                        <p>DITES BONJOUR</p>
+                        <a href="mailto:Fkipertino@gmail.com">Ahmedkipertino@gmail.com</a>
+                        <a href="https://t.me/mtykipert">t.me/mtykip</a>
+                    </div>
+                    <div class="groupe3">
+                        <a href="https://twitter.com">Twitter</a>
+                        <a href="https://github/kipert">GitHub</a>
+                        <a href="https://linkedin.com/kipert">Linkedin</a>
+                        <a href="https://youtube.com">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- FIN SIDEBAR -->
+        </div>
+        <!-- Fin block label -->
+        
+    </div>
+    <!-- FIN MAIN-CONTAINER -->
+
+    
+    
+</body>
+</html>
+
+<!-- Style de la page  -->
+<Style>
+    body {
+        margin: 0px;
+    }
+    .horiz input {
+        display: none;
+    }
+   .horiz {
+        width: 30px;
+        top: 2.5%;
+        right: 5%;
+        height: 50px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        animation: 1s;
+    }
+    .horiz label {
+        width: 100%;
+        height: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        row-gap: 8px;
+        z-index: 1;
+    }
+    
+    .lines .line {
+        height: 2px;
+        background-color: rgb(16, 16, 180);
+        position: relative;
+        transition: .4s;
+    }
+    .lines #line1 {
+        width: 100%;
+    }
+    .lines #line2 {
+        width: 70%;
+    }
+    input[type="checkbox"]:checked + label  #line1 {
+        width: 70%;
+        rotate: 45deg;
+        right: 10%;
+        top: 25%;
+    }
+    input[type="checkbox"]:checked + label  #line2 {
+        rotate: -45deg;
+        top: -25%;
+        right: 10%;
+    }
+    input[type="checkbox"]:checked + label + .sidebar {  
+        opacity: 1;
+        height: 450px;
+        width: 360px;
+    }
+    input[type="checkbox"]:checked + label div {
+        background-color: rgb(16, 16, 180);
+    }
+    input[type="checkbox"]:checked + label + .sidebar > .logo > .p2 {
+        rotate: 360deg;
+        top:-33px;
+        left: 105px;
+    }
+    .sidebar {
+        position: absolute;
+        width: 0;
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: #FFF;
+        top: 2%;
+        right: -20px;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) .4s,
+         cubic-bezier(0.175, 0.885, 0.32, 1) .4s;
+    }
+    .sidebar .logo {
+        margin: 20px 0px 20px 20px;
+    }
+    .sidebar .logo .p {
+        font-family: cursive;
+        font-size: 1.3rem;
+        background-color: gold;
+        border-radius: 5px;
+        width: 99px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        text-shadow: 1px 1px 2px rgb(16, 16, 180);
+        color: white;
+        position: relative;
+    }
+    .sidebar .logo .p2 {
+        width: 90px;
+        font-family: cursive;
+        color: rgb(16, 16, 180);
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px gold;
+        transition: 1s;
+        position: relative;
+        
+    }
+    .sidebar .liens {
+        font-family: "Century gothic" ;
+        font-size: 1.2rem;
+        font-weight:lightser;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 40px;
+    }
+    .sidebar .liens > div > a {
+        text-decoration: none;
+    }
+    .groupe1, .groupe2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+    .groupe2 p {
+        letter-spacing: 5px;
+    }
+    .main-container {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    @media screen and (max-width: 500px) {
+        .main-container {
+            flex-direction: column;
+            height: 900px;
+        }
+        .main-container .container1 {
+            width: 100%;
+            height: 500px;
+        }
+        .main-container .container1 .texte p {
+            margin-right: -40px;
+            line-height: 25px;
+        }
+        .main-container .container2 {
+            width: 100%;
+            height: 400px;
+        }
+        .main-container .profil {
+            left: 52%;
+            top: 78%;
+        }
+        .container1 .experience .exp1 {
+            margin-bottom: 20px;
+            display:initial;
+        }
+        .main-container .horiz label div {
+            background-color: rgb(193, 245, 97);
+        }
+        
+    }
+    @media screen and (max-width: 530px) {
+        .experience .exp1 {
+            margin-bottom: 50px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }   
+    }
+
+    .container1 {
+        background-color: rgb(16, 16, 180);
+        color: #FFF;
+        width: 75%;
+        position: relative;
+    }
+
+    .container2 {
+        background-color: rgb(193, 245, 97);
+        width: 25%;
+        position: relative;
+    }
+    
+    .profil {
+        position: absolute;
+        width: 200px;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+         
+    }
+    .profil > img {
+        width: 200px;
+        border-radius: 1vh;
+    }
+
+    .experience {
+        display: flex;
+        margin-left: 80px;
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+
+    }
+
+    .experience > .exp1 {
+        margin-right: 30px;
+        line-height: 20px;
+        color: rgb(186, 245, 78);
+    }
+
+    .nom-entreprise, .propos > .texte > .fonction {
+        color: rgb(186, 245, 78);
+    }
+    
+    .nom-entreprise {
+        margin: 50px;
+    }
+
+    .propos {
+        margin-left: 80px;
+    }
+    .propos > .texte > p {
+        padding-right: 100px;
+        margin-right: 50px;
+        line-height: 20px;
+    }
+</Style>

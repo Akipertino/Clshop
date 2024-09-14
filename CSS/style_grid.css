@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+.container {
+    width: 800px;
+    height: 800px;
+    background-color: lightgray;
+    border: 5px solid black;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px 10px;
+}
+.container .box {
+    widthk: 100px;
+    heigoht: 100px;
+    background-color: gold;
+    color: navy;
+    font-weight: bold;
+    font-size: 3rem;
+    border: 1px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box:hover {
+    background-color: aqua;
+    cursor: pointer;
+    color: red;
+}
+#box1 {
+    grid-column: 2/4;
+    grid-row: 1/5;
+}
+#box8 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
